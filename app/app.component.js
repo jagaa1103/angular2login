@@ -18,17 +18,18 @@ System.register(['angular2/core'], function(exports_1) {
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
-                    this.name = "Jagaa";
-                    this.greeting = 'Hello';
-                    console.log(this.name + ' ' + this.greeting);
+                    console.log(this.facebook_id + ' ' + this.password);
                 }
                 AppComponent.prototype.showAlert = function () {
-                    alert('from ' + this.name);
+                    console.log('clicked...kk');
+                };
+                AppComponent.prototype.login = function () {
+                    console.log(this.facebook_id + ' / ' + this.password);
                 };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'greeting',
-                        template: '<div class="container" (click)="showAlert()"><div class="jumbotron">Hello Jagaa</div></div>'
+                        templateUrl: 'views/app.html'
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

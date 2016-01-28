@@ -1,18 +1,19 @@
 import{Component} from 'angular2/core';
-
+import{NgForm} from 'angular2/common';
 @Component({
   selector: 'greeting',
-  template: '<div class="container" (click)="showAlert()"><div class="jumbotron">Hello Jagaa</div></div>'
+  templateUrl: 'views/app.html'
 })
 export class AppComponent{
-  public name: String;
-  public greeting: String;
+  public facebook_id: String;
+  public password: String;
   constructor(){
-    this.name = "Jagaa";
-    this.greeting = 'Hello';
-    console.log(this.name +' '+ this.greeting);
+    console.log(this.facebook_id +' '+ this.password);
   }
   showAlert(){
-    alert('from ' + this.name);
+    console.log('clicked...kk');
+  }
+  login(){
+    console.log(this.facebook_id + ' / ' + this.password);
   }
 }
