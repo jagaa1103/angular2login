@@ -18,11 +18,17 @@ System.register(['angular2/core'], function(exports_1) {
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
+                    this.name = "Jagaa";
+                    this.greeting = 'Hello';
+                    console.log(this.name + ' ' + this.greeting);
                 }
+                AppComponent.prototype.showAlert = function () {
+                    alert('from ' + this.name);
+                };
                 AppComponent = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
-                        template: '<div>Hello Jagaa</div'
+                        selector: 'greeting',
+                        template: '<div class="container" (click)="showAlert()"><div class="jumbotron">Hello Jagaa</div></div>'
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

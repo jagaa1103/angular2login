@@ -3,7 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Angular2Login</title>
-    <!-- <script src=""></script> -->
+
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" charset="utf-8">
+
     <script>
       System.config({
         packages:{
@@ -17,6 +27,6 @@
     </script>
   </head>
   <body>
-    <my-app>....</my-app>
+    <greeting></greeting>
   </body>
 </html>
