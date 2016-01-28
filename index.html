@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular2Login</title>
+    <!-- <script src=""></script> -->
+    <script>
+      System.config({
+        packages:{
+          app:{
+            format: 'register',
+            defaultExtension:'js'
+          }
+        }
+      });
+      System.import('app/boot').then(null, console.error.bind(console));
+    </script>
+  </head>
+  <body>
+    <my-app>....</my-app>
+  </body>
+</html>
