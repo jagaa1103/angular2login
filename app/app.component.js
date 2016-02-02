@@ -18,6 +18,7 @@ System.register(['angular2/core'], function(exports_1) {
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
+                    this.lock = new Auth0Lock('04dgaHHvrKWy2Oyhdl0IUlNKdlUqXmJq', 'jagaa.eu.auth0.com');
                     console.log(this.facebook_id + ' ' + this.password);
                 }
                 AppComponent.prototype.showAlert = function () {
@@ -25,6 +26,13 @@ System.register(['angular2/core'], function(exports_1) {
                 };
                 AppComponent.prototype.login = function () {
                     console.log(this.facebook_id + ' / ' + this.password);
+                    this.lock.show(function (err, profile, id_token) {
+                        if (err) {
+                            throw new Error(err);
+                        }
+                        localStorage.setItem('profile', JSON.stringify(profile));
+                        localStorage.setItem('id_token', id_token);
+                    });
                 };
                 AppComponent = __decorate([
                     core_1.Component({
